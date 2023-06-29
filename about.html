@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content ="with=device-width, initial-scale=1.0">
+        <title>
+            Bayt Almaraje'a
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    </head>
+    <body>
+        
+        <section class="sub-header">
+            <nav>
+                <a href = "index.html"><img src = "images/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="bi bi-x" onclick="hideMenu()"></i>
+                    <ul>
+                        
+                        <li><a href = "index.html">HOME</a></li>
+                        <li><a href = "about.html">ABOUT</a></li>
+                        <li><a href = "services.html">OUR SERVICES</a></li>
+                        <li><a href = "contact.html">CONTACT US</a></li>
+                        
+                    </ul>
+                </div>
+                <i class="bi bi-list" onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+                <img src = "images/greenbg.png">
+            </div>
+        </section>
+
+        <section class="aboutus">
+            <div>
+                <h1 class="title1">About Us</h1>       
+            </div>
+            <article>
+                <p id="firstparagraph">Bayt Almaraje'a was founded for one simple, yet very important reason: 
+                    to put the interests of our clients first, period. While many firms preach this same message, 
+                    the interests of the firm and the interests of the client are not always aligned. 
+                    By comparison, the internal structure of traditional firms is primarily based upon
+                    a billable approach and attorneys are rewarded or penalized based upon the same. 
+                    We are not a billable centered practice; rather, we are a client centered practice and can prove it.
+                    <br>
+                    We analytically measure the success of our firm and each attorney based upon: 
+                    client feedback, client savings, case closure rate, trial success and involvement 
+                    in the legal and business community.</p>
+                <p id="secondparagraph">Our firm’s internal structure is predicated upon truly understanding the business model, 
+                   corporate culture, organizational challenges and how we may become part of our clients' teams. 
+                   We are in constant communication with our clients to discuss case assessment and litigation strategies, 
+                   as well as make recommendations and provide insight into every step of the process. 
+                   We formulate litigation strategies not only based upon the law and facts of each case, 
+                   but also with the vision to advance our client's overall organizational goals. 
+                   As attorneys, we are not only our client's legal advisors but also their business partners.
+                    <br>
+                    We would be honored to be part of your team!</p>
+            </article>
+        </section>
+        
+        <section class="tr">
+            <div class="transition reveal">
+                <h1>DEMAND MORE.</h1>
+                <p>Simply put, client goals include minimizing litigation costs, 
+                    mitigating exposure, securing an amicable yet successful resolution, 
+                    and ensuring prompt case disposition.</p>
+            </div>
+        </section>
+
+        <section class="reveal">
+        <h1 class="title">Get in Touch</h1>
+
+
+
+        <section class="contact-us">
+            
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="bi bi-telephone"></i>
+                        <span><h5>+966 56 969 9977</h5></span>
+                    </div>
+                    <div>
+                        <i class="bi bi-envelope"></i>
+                        <span><h5>Abdulrahman@baytmar.com</h5></span>
+                    </div>
+                    <div>
+                        <i class="bi bi-geo-alt"></i>
+                        <span><h5>Jeddah - Saudi Arabia</h5></span>
+                    </div>
+                </div>
+                <div class="contact-col">
+                    
+                    <form action="">
+                        <input type="text" placeholder="Enter your name" required>
+                        <input type="email" placeholder="Enter your email" required>
+                        <input type="text" placeholder="Enter your subject" required>
+                        <textarea rows="8" placeholder="Message" required></textarea>
+                        <button type="submit" class="sendmsg">Send Message</button>
+                    </form>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="ftr">
+            <div class="nav-links2" id="navLinks2">
+                <ul>
+                    
+                    <li><a href = "index.html">HOME</a></li>
+                    <li><a href = "about.html">ABOUT</a></li>
+                    <li><a href = "services.html">OUR SERVICES</a></li>
+                    <li><a href = "contact.html">CONTACT US</a></li>
+                    
+                </ul>
+                <footer>
+                <p>&copy Copyright Bayt Almaraje'a. All rights reserved.</p>
+            </footer>
+            </div>
+            
+        </section>
+
+    </section>
+
+
+
+
+
+<!--Javascript Menu toggle-->
+        <script>
+            var navlinks= document.getElementById("navLinks");
+
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+
+
+            window.addEventListener('scroll', reveal);
+            function reveal(){
+                var reveals = document.querySelectorAll('.reveal');
+                for(var i = 0; i< reveals.length; i++){
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 150;
+
+                    if(revealtop<windowheight-revealpoint){
+                        reveals[i].classList.add('active');
+                    }
+                    else{
+                        reveals[i].classList.remove('active');
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>
